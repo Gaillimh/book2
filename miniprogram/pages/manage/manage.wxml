@@ -1,0 +1,17 @@
+<scroll-view scroll-y refresher-enabled bindscrolltolower="onReachBottom" style="height: 100%;" bindrefresherpulling="onPulling"  refresher-triggered="{{triggered}}" >
+  <van-swipe-cell right-width="{{ 65 }}" wx:for="{{list}}" wx:key="{{_id}}"  async-close bind:close="closeClick">
+    <van-cell-grounp>
+      <van-cell is-link clickable url="../redact/redact?_id={{item._id}}">
+        <view slot="title" class="title">
+          <van-image src="{{item.cover}}" height="200rpx" width='200rpx'></van-image>
+          <view class="content">
+            <text style="font-size: 40rpx;font-weight:bolder;">{{item.name}}</text>
+            <text>{{item.author}}</text>
+          </view>
+        </view>
+      </van-cell>
+    </van-cell-grounp>
+    <view slot="right" class="delete-btn">删除</view>
+  </van-swipe-cell>
+  <view class="button" style="display: {{flag?'block':'none'}};">我也是有底线的</view>
+</scroll-view>

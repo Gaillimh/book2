@@ -1,0 +1,29 @@
+page{
+  background-color: white;
+}
+.title{
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 90rpx;
+}
+.profile{
+  display: flex;
+  align-items: center;
+}
+.profile text{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.titlFont{
+  font-size: 30rpx;
+}
+.headTitle{
+  font-size: 32rpx;
+}
+.title-class{
+  background-color: orange;
+}
+.van-grid-item__content--center{
+  align-items:baseline !important;
+}

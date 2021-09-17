@@ -1,0 +1,30 @@
+<view class="head">
+  <van-row>
+    <van-col span="12" offset="6">
+      <image src="{{url}}" style="width:100%;height: 500rpx;"></image>
+    </van-col>
+  </van-row>
+</view>
+<view class="mid">
+  <van-tabs active="{{ active }}" bind:change="onChange" title-active-color="#000000" title-inactive-color="#8d8d8d">
+    <van-tab title="详情">{{details}}</van-tab>
+    <van-tab title="目录">
+      <van-cell wx:for="{{catalog}}" wx:key="index" title="{{item}}" />
+    </van-tab>
+  </van-tabs>
+</view>
+<van-tabbar active="{{ buttonactive }}" bind:change="butonChange" active-color='#ffffff' inactive-color="#000000">
+
+  <view class="buttonleft" style="background-color: {{buttonactive==0?'orange;':''}}">
+    <van-tabbar-item>
+      {{flag?'移出书桌':'添加书桌'}}
+    </van-tabbar-item>
+  </view>
+
+  <view class="buttonright" style="background-color: {{buttonactive==1?'orange;':''}}">
+    <van-tabbar-item>
+      阅读
+    </van-tabbar-item>
+  </view>
+</van-tabbar>
+<van-toast id="van-toast" />

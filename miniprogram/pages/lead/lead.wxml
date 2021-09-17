@@ -1,0 +1,26 @@
+<!-- 一个列表项 -->
+<view wx:for="{{listData}}" wx:key="id" class="list-item">
+    <!-- 头像 -->
+    <view class="head-icon-row">
+        <image class="head-icon" src="{{item.aPhoto}}"></image>
+        <text class="author">{{item.author}}</text>
+    </view>
+    <!-- 图片 -->
+    <view>
+        <image class="img" src="{{item.bigImg}}" mode="widthFix"></image>
+    </view>
+    <!-- 标题 -->
+    <view>
+        <text class="tag">热点</text>
+        <text class="title">{{item.tit}}</text>
+    </view>
+    <!-- 简介 -->
+    <view class="desc">
+        {{item.words}}
+    </view>
+    <!-- 评论 -->
+    <view class="comment">
+        <text>{{item.clickNum}}点击 · 4本书</text>
+        <text>{{item.great}}</text>
+    </view>
+</view>

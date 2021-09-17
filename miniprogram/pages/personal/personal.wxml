@@ -1,0 +1,41 @@
+<van-row>
+  <van-col offset="20" span="4">
+    <text style="color: darkgoldenrod;">编辑</text>
+  </van-col>
+  <view class="content">
+    <van-image round width="5rem" height="5rem" src="/../images/img/photo1.jpg" />
+  </view>
+  <view class="content">
+    <text>用户名</text>
+  </view>
+  <view class="status">
+    <van-cell clickable>
+      <view class="container" slot="title">
+        <text>0分钟</text>
+        <text class="text">读书时长</text>
+      </view>
+      <view class="stri" slot="right-icon"></view>
+    </van-cell>
+    <van-cell is-link>
+      <view class="container" slot="title">
+        <text>0</text>
+        <text class="text">蜗牛壳</text>
+      </view>
+    </van-cell>
+  </view>
+</van-row>
+
+<view>
+  <van-cell is-link  bind:click="manageClick">
+    <view slot="title">
+      <van-image src="/../images/编辑.svg" width="30rpx" height="30rpx"></van-image>
+      <text  style="margin-left: 20rpx;">图书管理</text>
+    </view>
+  </van-cell>
+  <van-cell is-link bind:click="publishClick">
+    <view slot="title">
+      <van-image src="/../images/编辑.svg" width="30rpx" height="30rpx"></van-image>
+      <text style="margin-left: 20rpx;">图书发布</text>
+    </view>
+  </van-cell>
+</view>

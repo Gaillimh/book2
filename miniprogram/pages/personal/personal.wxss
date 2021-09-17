@@ -1,0 +1,50 @@
+/* pages/personal/personal.wxss */
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.container text{
+  height: 50rpx;
+}
+.van-col{
+  margin-top: 20rpx !important;
+  margin-bottom: 20rpx !important;
+}
+.van-row{
+  background-color: white !important;
+  margin-bottom: 30rpx !important;
+}
+van-row text{
+  font-size: 35rpx;
+}
+.content{
+  width: 100%;
+  display: flex;
+  margin-bottom: 20rpx;
+  justify-content: center;
+}
+.text{
+  color: #8d8d8d;
+  font-size: 28rpx;
+}
+.van-cell{
+  display: flex !important;
+  justify-content: center !important;
+  align-content: center !important;
+}
+.stri{
+  width: 1rpx;
+  float:right;
+  border-right: 1rpx solid #8d8d8d;
+  height: 50rpx;
+  margin-top: 5%;
+}
+.status{
+  display: flex;
+  justify-content:space-evenly !important;
+}
+.status van-cell{
+  flex: 1 !important;
+}

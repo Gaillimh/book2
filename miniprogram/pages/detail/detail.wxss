@@ -1,0 +1,13 @@
+.head {
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.buttonright,
+.buttonleft {
+  width: 100%;
+}
+
+.van-tabs__line {
+  background-color: black !important;
+}

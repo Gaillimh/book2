@@ -1,0 +1,23 @@
+
+.content{
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  padding-top: 20rpx;
+  background-color: white;
+}
+.brief,.catalogue{
+  height: 300rpx !important;
+  border: 1px solid #a3a3a3;
+}
+.buttom{
+  /* position: absolute;
+  bottom: 0; */
+  width: 100%;
+  display:flex;
+}
+van-button{
+  flex: 1 !important;
+}
+.van-button{
+  width: 100% !important;
+}

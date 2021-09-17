@@ -1,0 +1,13 @@
+<van-search value="{{ value }}" placeholder="请输入" use-left-icon-slot bind:search="onSearch" shape="round" bind:change="searchChange"/>
+<view class="head" bindtap="onClick">搜索</view>
+<van-cell-group>
+  <van-cell wx:for="{{list}}" wx:key="index" link-type="navigateTo"
+  url="/pages/detail/detail?_id={{item._id}}">
+  <text slot="title">{{item.name}}</text>
+  <image src="{{item.cover}}" slot="right-icon" style="width: 100rpx;height: 150rpx;"></image>
+  </van-cell>
+</van-cell-group>
+
+<view wx:if="{{isSearch}}">
+    <van-empty description="暂无数据" />
+</view>

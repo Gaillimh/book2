@@ -1,0 +1,13 @@
+/* pages/classify/classify.wxss */
+.titlFont {
+  position: absolute;
+  color: white;
+}
+.van-grid-item__content{
+  padding: 0 !important;
+}
+page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

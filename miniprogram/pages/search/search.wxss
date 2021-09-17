@@ -1,0 +1,9 @@
+.head{
+  position: absolute;
+  right: 50rpx;
+  top: 35rpx;
+  z-index: 100;
+}
+page{
+  background-color: white;
+}

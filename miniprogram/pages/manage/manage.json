@@ -1,0 +1,5 @@
+{
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "图书管理",
+  "usingComponents": {}
+}

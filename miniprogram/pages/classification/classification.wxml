@@ -1,0 +1,24 @@
+<van-nav-bar custom-style="background-color:#7B68EE">
+  <view slot='left' bindtap="onClickLeft">
+    <van-icon name="arrow-left" color="white" />
+    <text style="color: white;">返回</text>
+  </view>
+  <text slot='title' class="headTitle" style="color: white;">{{title}}</text>
+</van-nav-bar>
+<view class="title">
+  {{word}}
+</view>
+
+<van-cell value='   '>
+  <view class="profile" slot="right-icon">
+    <image src="../../images/img/photo2.jpg" style="width: 80rpx;height: 80rpx;border-radius: 50%;"></image>
+    <text>{{name}}</text>
+    <image src="../../images/addtofav_ic_focus.png" style="width: 30rpx;height: 30rpx;border-radius: 50%;"></image>
+  </view>
+</van-cell>
+<van-grid gutter="{{ 15 }}" column-num="3" border="{{false}}">
+  <van-grid-item icon="photo-o" text="文字" wx:for="{{list}}" use-slot url='../detail/detail?_id={{item._id}}'>
+    <image style="width: 100%; height: 270rpx;border-radius: 10rpx;" src="{{item.cover}}" />
+    <text class="titlFont">{{item.name}}</text>
+  </van-grid-item>
+</van-grid>

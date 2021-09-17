@@ -1,0 +1,25 @@
+<van-cell-grounp>
+  <van-field label="书名" model:value="{{ name }}" placeholder="请输入书名"></van-field>
+  <van-field label='作者' model:value="{{ author }}" placeholder="请输入作者"></van-field>
+  <van-field label='分类' model:value="{{ detail }}" placeholder="请输入分类" bind:click-input="detailClick" readonly>
+  </van-field>
+  <van-field label="封面" model:value="{{  cover }}" readonly>
+    <van-uploader slot="right-icon" file-list="{{ fileList }}" upload-text="上传图片" bind:after-read="afterRead"
+      max-count="1" bind:delete="onDelete" />
+  </van-field>
+</van-cell-grounp>
+<view class="content">
+  <text>简介：</text>
+  <textarea placeholder="请输入简介" class="brief" bindinput="briefInput" value='{{briefInput}}'></textarea>
+  <text>目录：</text>
+  <textarea placeholder="请输入目录" class="catalogue" bindinput="catalogueInput" value="{{catalogueInput}}"></textarea>
+</view>
+<view class="buttom">
+  <van-button type="default" bind:click='publishClick'>提交</van-button>
+  <van-button type="default" bind:click='resetClick'>重置</van-button>
+</view>
+
+<van-popup show="{{ show }}" position="bottom" bind:close="onClose">
+  <van-picker show-toolbar title="请选择分类" columns="{{ columns }}" bind:cancel="onCancel" bind:confirm="onConfirm" />
+</van-popup>
+<van-toast id="van-toast" />

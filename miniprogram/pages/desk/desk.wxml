@@ -1,0 +1,24 @@
+<van-sticky>
+    <view class="btns">
+        <van-button type="{{isSelect? 'default': 'primary'}}" size="mini" round bind:click="onSelectBtn">{{isSelect? '取消': '选择'}}</van-button>
+        <van-button wx:if="{{selection.length>0}}" type="danger" size="mini" round bind:click="onRemove">删除</van-button>
+    </view>
+</van-sticky>
+
+<view class="list">
+    <van-cell wx:for="{{list}}" wx:key="_id" clickable bind:click="onCellClick" data-i="{{index}}">
+        <view slot="title" class="view-container">
+            <van-checkbox wx:if="{{isSelect}}" style="align-self: center;" value="{{ item.checked }}"></van-checkbox>
+            <van-image class="img" width="200rpx" height="200rpx" src="{{item.cover}}"></van-image>
+            <view class="book-info">
+                <text>{{item.name}}</text>
+                <text>{{item.author}}</text>
+            </view>
+        </view>
+    </van-cell>
+
+    <van-empty wx:if="{{list.length <= 0}}" description="暂无数据" />
+</view>
+
+<van-toast id="van-toast" />
+<view style="height: {{height}};"></view>

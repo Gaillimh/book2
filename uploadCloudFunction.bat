@@ -1,0 +1,1 @@
+"E:\Program Files (x86)\Tencent\微信web开发者工具\cli.bat" cloud functions deploy --e cloud1-6gnkhxela7bed379 --n quickstartFunctions --r --project "D:\WeChatProjects\zuoye" --report_start --report
